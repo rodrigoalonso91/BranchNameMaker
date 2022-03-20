@@ -98,7 +98,6 @@
             // 
             this.BtnCommitFormat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnCommitFormat.BackColor = System.Drawing.Color.LightYellow;
-            this.BtnCommitFormat.Enabled = false;
             this.BtnCommitFormat.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
             this.BtnCommitFormat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCommitFormat.Font = new System.Drawing.Font("JetBrains Mono", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -119,7 +118,6 @@
             // 
             this.BtnBranchFormat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnBranchFormat.BackColor = System.Drawing.Color.LightYellow;
-            this.BtnBranchFormat.Enabled = false;
             this.BtnBranchFormat.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
             this.BtnBranchFormat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBranchFormat.Font = new System.Drawing.Font("JetBrains Mono", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
