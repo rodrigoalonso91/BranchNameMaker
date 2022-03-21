@@ -1,5 +1,4 @@
 # BranchNameMaker
----
 Su funcion es generar el formato que usamos en mi empresa para las ramas de desarrollo y el primer commit de desarrollo. Necesario? no, util? eem, tipeo menos..
 
 ## Interfaz
