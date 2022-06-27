@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BranchNameMaker
 {
@@ -12,7 +7,7 @@ namespace BranchNameMaker
     {
         private void RemoveStringBuilderSymbols(StringBuilder sb)
         {
-            string patron = @"[^\w]";
+            const string patron = @"[^\w]";
             Regex regex = new Regex(patron);
             for (int i = 0; i < sb.Length; i++)
             {
@@ -26,7 +21,7 @@ namespace BranchNameMaker
             for (int i = 0; i < sb.Length; i++)
             {
                 var currentChar = sb[i].ToString();
-                if (int.TryParse(currentChar.ToString(), out int result)) return i;
+                if (int.TryParse(currentChar, out _)) return i;
             }
             return 0;
         }
