@@ -6,7 +6,7 @@ namespace BranchNameMaker
 {
     public partial class MainForm : Form
     {
-        private static bool IsLockOpen = false;
+        private static bool IsLockOpen = true;
 
         public MainForm()
         {
@@ -23,7 +23,7 @@ namespace BranchNameMaker
                 MessageBox.Show("Clipboard vacio...", "RamaMaker", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Clipboard.SetText("Clipboard vacio...");
             }
-            var formatBuilder = new FormatBuilder();
+            var formatBuilder = new FormatBuilder(Txtbox_branchFolder.Text, Txtbox_prefix.Text);
             LblBranchView.Text = formatBuilder.GetFormat(LblClipboardView.Text);
             LblCommitView.Text = formatBuilder.GetFormat(LblClipboardView.Text, CommitMode: true);
         }

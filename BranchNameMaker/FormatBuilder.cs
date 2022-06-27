@@ -1,11 +1,22 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace BranchNameMaker
 {
     public class FormatBuilder
     {
-        private void RemoveStringBuilderSymbols(StringBuilder sb)
+        private readonly string Folder;
+
+        private readonly string Prefix;
+
+        public FormatBuilder(string folder, string prefix)
+        {
+            Folder = folder;
+            Prefix = prefix;
+        }
+
+        private static void RemoveStringBuilderSymbols(StringBuilder sb)
         {
             const string patron = @"[^\w]";
             Regex regex = new Regex(patron);
@@ -16,7 +27,7 @@ namespace BranchNameMaker
             }
         }
 
-        private int SetFistNumbreIndex(StringBuilder sb)
+        private static int SetFistNumbreIndex(StringBuilder sb)
         {
             for (int i = 0; i < sb.Length; i++)
             {
@@ -33,12 +44,16 @@ namespace BranchNameMaker
             sb.Remove(0, firstNumberIndex);
             RemoveStringBuilderSymbols(sb);
 
-            if (CommitMode) sb.Replace("-", " ");
-            else sb.Replace(' ', '-');
-
-            sb.Insert(0, '#');
-
-            return sb.ToString();
+            if (CommitMode)
+            {
+                sb.Replace("-", " ").Insert(0, '#');
+                return sb.ToString();
+            }
+            else
+            {
+                sb.Replace(' ', '-');
+                return Path.Combine(Folder, sb.ToString());
+            }
         }
     }
 }
