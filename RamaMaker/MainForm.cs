@@ -22,7 +22,7 @@ namespace BranchNameMaker
             if (string.IsNullOrEmpty(LblClipboardView.Text))
             {
                 MessageBox.Show("Clipboard vacio...", "RamaMaker", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Clipboard.SetText("Clipboard vacio...");
+                Clipboard.SetText("Haz doble click para importar el contenido del clipboard...");
             }
             var formatBuilder = new FormatBuilder(Txtbox_branchFolder.Text);
             LblBranchView.Text = formatBuilder.GetFormat(LblClipboardView.Text);
