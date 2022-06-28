@@ -17,7 +17,6 @@ namespace BranchNameMaker
 
         private void GetResults()
         {
-
             LblClipboardView.Text = Clipboard.GetText();
             if (string.IsNullOrEmpty(LblClipboardView.Text))
             {
