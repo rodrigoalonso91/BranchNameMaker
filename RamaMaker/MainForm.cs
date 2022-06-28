@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using RamaMaker.Properties;
 
 namespace BranchNameMaker
 {
@@ -53,6 +54,17 @@ namespace BranchNameMaker
                 if (clipboardText == LblCommitView.Text || clipboardText == LblBranchView.Text) return;
                 GetResults();
             }
+        }
+
+        private void Txtbox_branchFolder_TextChanged(object sender, EventArgs e)
+        {
+            Settings.Default.BranchFolder = Txtbox_branchFolder.Text;
+            Settings.Default.Save();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            Txtbox_branchFolder.Text = Settings.Default.BranchFolder;
         }
     }
 }

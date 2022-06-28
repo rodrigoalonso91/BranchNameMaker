@@ -88,6 +88,7 @@
             this.Txtbox_branchFolder.Size = new System.Drawing.Size(169, 26);
             this.Txtbox_branchFolder.TabIndex = 14;
             this.Txtbox_branchFolder.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Txtbox_branchFolder.TextChanged += new System.EventHandler(this.Txtbox_branchFolder_TextChanged);
             // 
             // BtnLock
             // 
@@ -210,6 +211,7 @@
             this.MinimumSize = new System.Drawing.Size(993, 436);
             this.Name = "MainForm";
             this.Text = "RamaMaker";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.MainForm_MouseDoubleClick);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
