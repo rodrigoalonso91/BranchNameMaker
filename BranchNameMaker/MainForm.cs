@@ -23,7 +23,7 @@ namespace BranchNameMaker
                 MessageBox.Show("Clipboard vacio...", "RamaMaker", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Clipboard.SetText("Clipboard vacio...");
             }
-            var formatBuilder = new FormatBuilder(Txtbox_branchFolder.Text, Txtbox_prefix.Text);
+            var formatBuilder = new FormatBuilder(Txtbox_branchFolder.Text);
             LblBranchView.Text = formatBuilder.GetFormat(LblClipboardView.Text);
             LblCommitView.Text = formatBuilder.GetFormat(LblClipboardView.Text, CommitMode: true);
         }

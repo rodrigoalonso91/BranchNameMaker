@@ -8,12 +8,9 @@ namespace BranchNameMaker
     {
         private readonly string Folder;
 
-        private readonly string Prefix;
-
-        public FormatBuilder(string folder, string prefix)
+        public FormatBuilder(string folder)
         {
             Folder = folder;
-            Prefix = prefix;
         }
 
         private static void RemoveStringBuilderSymbols(StringBuilder sb)
